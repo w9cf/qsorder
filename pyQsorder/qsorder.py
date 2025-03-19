@@ -649,7 +649,8 @@ class recording_loop(QThread):
                        + "Z ...recording: " + filename)
                 self.update_console.emit(msg)
                 print_and_log(msg)
-                contest_dir = "AUDIO_" + str(now.year)
+#                contest_dir = "AUDIO_" + str(now.year)
+                contest_dir = self.options.path + "/" + "AUDIO_" + str(now.year)
                 if self._get_free_space_mb(contest_dir) < 100:
                     msg = "CTL: WARNING: Low Disk space"
                     self.update_console.emit(msg)
