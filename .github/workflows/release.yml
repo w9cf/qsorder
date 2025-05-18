@@ -30,7 +30,7 @@ jobs:
            #sudo apt-get install winetricks -y
            #sudo winetricks --self-update -y
            wget  https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks
-           chmod +w winetricks
+           chmod +x winetricks
            wine --version
            wine winecfg -v win7
            winetricks -q vcrun2017
