@@ -9,7 +9,7 @@ env:
 jobs:
   generate:
     name: Create release-artifacts
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
       - name: Checkout the repository
         uses: actions/checkout@master
@@ -27,10 +27,10 @@ jobs:
            sudo apt-get update -y
            sudo apt-get install wine32 -y
            sudo apt-get install wine -y
-           #sudo apt-get install winetricks -y
+           sudo apt-get install winetricks -y
            #sudo winetricks --self-update -y
-           wget  https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks
-           chmod +x winetricks
+           #wget  https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks
+           #chmod +x winetricks
            wine --version
            wine winecfg -v win7
            ./winetricks -q vcrun2017
